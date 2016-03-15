@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+  <context id="context1" >
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/test" userId="root" password="123456" />
+    <javaModelGenerator targetPackage="com.seawave.entity" targetProject="spring.mvc.base" />
+    <sqlMapGenerator targetPackage="com.seawave.dao" targetProject="spring.mvc.base" />
+    <javaClientGenerator targetPackage="com.seawave.entity" targetProject="spring.mvc.base" type="XMLMAPPER" />
+
+  </context>
+</generatorConfiguration>

@@ -10,7 +10,7 @@
                         http://www.springframework.org/schema/mvc    
                         http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">  
     <!-- 自动扫描 -->  
-    <context:component-scan base-package="com.cn.hnust" /> 
+    <context:component-scan base-package="com.seawave.dao" /> 
      
 	<!-- JDBC参数配置 -->
 	<bean
@@ -42,7 +42,7 @@
 		<!-- 设置连接池最小空闲值 -->
 		<property name="minIdle" value="${pool.minIdle}" />
 		<!-- 设置连接池最大空闲值 -->
-		<property name="maxIdle" value="{pool.maxIdle}" />
+		<property name="maxIdle" value="${pool.maxIdle}" />
 		<!-- 获取连接最大等待时间 -->  
         <property name="maxWait" value="${pool.maxWait}"></property>
 		<property name="testWhileIdle" value="true" />
@@ -58,7 +58,7 @@
   
     <!-- DAO接口所在包名，Spring会自动查找其下的类 -->  
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">  
-        <property name="basePackage" value="com.cn.hnust.dao" />  
+        <property name="basePackage" value="com.seawave.dao" />  
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>  
     </bean>  
   
